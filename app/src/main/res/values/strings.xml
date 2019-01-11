@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">CarWashing</string>
     <string name="title_activity_maps">Map</string>
+    <string name="map_menu">Карта</string>
+    <string name="carwashers_menu">Автомойки</string>
+    <string name="profile_menu">Профиль</string>
 </resources>

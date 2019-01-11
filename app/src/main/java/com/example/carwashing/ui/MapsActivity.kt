@@ -1,7 +1,9 @@
-package com.example.carwashing
+package com.example.carwashing.ui
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+
+import com.example.carwashing.R
 
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap

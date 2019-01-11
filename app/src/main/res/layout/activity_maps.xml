@@ -1,9 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<fragment xmlns:android="http://schemas.android.com/apk/res/android"
-          xmlns:tools="http://schemas.android.com/tools"
-          xmlns:map="http://schemas.android.com/apk/res-auto"
-          android:layout_width="match_parent"
-          android:layout_height="match_parent"
-          android:id="@+id/map"
-          tools:context=".MapsActivity"
-          android:name="com.google.android.gms.maps.SupportMapFragment"/>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+        <!--<import type="com.zerotoonelabs.qamqor4inspectors.vo.Resource"/>-->
+
+        <!--<import type="com.zerotoonelabs.qamqor4inspectors.vo.Status"/>-->
+
+        <!--<variable-->
+                <!--name="resource"-->
+                <!--type="Resource"/>-->
+        <!--<variable-->
+                <!--name="signResource"-->
+                <!--type="Resource"/>-->
+        <!--<variable-->
+                <!--name="retryCallback"-->
+                <!--type="com.zerotoonelabs.qamqor4inspectors.common.RetryCallback"/>-->
+
+        <!--<variable-->
+                <!--name="retrySignCallback"-->
+                <!--type="com.zerotoonelabs.qamqor4inspectors.common.RetryCallback"/>-->
+
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:app="http://schemas.android.com/apk/res-auto"
+                  android:layout_height="match_parent" android:layout_width="match_parent"
+                  android:orientation="vertical">
+        <fragment xmlns:tools="http://schemas.android.com/tools"
+                  xmlns:map="http://schemas.android.com/apk/res-auto"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:layout_marginBottom="50dp"
+                  android:id="@+id/map"
+                  tools:context=".ui.MapsActivity"
+                  android:name="com.google.android.gms.maps.SupportMapFragment"/>
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:elevation="3dp"
+                app:menu="@menu/bottom_navigation_main"
+                app:itemBackground="@color/white"
+                app:itemIconTint="@drawable/navigation"
+                app:itemTextColor="@drawable/navigation"
+                android:layout_alignParentBottom="true"
+        />
+    </RelativeLayout>
+</layout>
