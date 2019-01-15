@@ -1,7 +1,11 @@
 <resources>
-    <string name="app_name">CarWashing</string>
-    <string name="title_activity_maps">Map</string>
+    <string name="app_name">Jumaisynba</string>
+    <string name="title_activity_maps">Jumaisynba</string>
     <string name="map_menu">Карта</string>
     <string name="carwashers_menu">Автомойки</string>
     <string name="profile_menu">Профиль</string>
+    <string name="all_retry_label">Повторить</string>
+    <string name="error_unknown">Неизвестная ошибка. Повторите попытку через некоторое время</string>
+    <string name="title_about_app">О приложении</string>
+
 </resources>

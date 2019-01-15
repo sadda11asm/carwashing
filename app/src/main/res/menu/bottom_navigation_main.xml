@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-            android:id="@+id/action_favorites"
+            android:id="@+id/action_map"
             android:enabled="true"
             android:icon="@drawable/location"
             android:title="@string/map_menu"
             app:showAsAction="ifRoom" />
     <item
-            android:id="@+id/action_schedules"
+            android:id="@+id/action_carwashes"
             android:enabled="true"
             android:icon="@drawable/carwash"
             android:title="@string/carwashers_menu"
             app:showAsAction="ifRoom" />
     <item
-            android:id="@+id/action_music"
+            android:id="@+id/action_profile"
             android:enabled="true"
             android:icon="@drawable/avatar"
             android:title="@string/profile_menu"

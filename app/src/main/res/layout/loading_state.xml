@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.example.carwashing.vo.Resource"/>
+
+        <import type="com.example.carwashing.vo.Status"/>
+
+        <variable
+            name="resource"
+            type="Resource"/>
+
+        <variable
+            name="callback"
+            type="com.example.carwashing.common.RetryCallback"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:background="@color/loading_state_background"
+        android:clipToPadding="false"
+        android:elevation="24dp"
+        android:focusable="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:visibility="invisible"
+    >
+        <!--
+        app:visibleGone="@{!(resource.status == Status.LOADING) ||  !(resource.status == Status.ERROR)}"-->
+
+        <ProgressBar
+            android:id="@+id/progress_talon_pdf"
+            style="@android:style/Widget.Material.ProgressBar.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:visibleGone="@{resource.status == Status.LOADING}"/>
+
+        <Button
+            android:id="@+id/retry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> callback.retry()}"
+            android:text="@string/all_retry_label"
+            app:visibleGone="@{resource.status == Status.ERROR}"/>
+
+        <TextView
+            android:id="@+id/error_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="6"
+            android:paddingEnd="8dp"
+            android:paddingStart="8dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            app:message="@{resource.message ?? @string/error_unknown}"
+            app:resId="@{resource.messageId}"
+            app:visibleGone="@{resource.status == Status.ERROR || resource.status == Status.LOADING}"
+            tools:text="Failed to connect to ...."/>
+
+    </LinearLayout>
+</layout>
+
