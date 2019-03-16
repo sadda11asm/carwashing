@@ -25,6 +25,7 @@ import com.google.android.gms.maps.model.MarkerOptions
 
 import com.example.carwashing.common.NavigationController
 import com.example.carwashing.ui.base.BaseActivity
+import com.facebook.accountkit.ui.AccountKitActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_maps.*
 import org.koin.android.ext.android.inject
@@ -122,7 +123,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMyLoca
 
     companion object {
         fun open(context: Context){
-            val intent = Intent(context, MapsActivity::class.java)
+            var intent = Intent(context, MapsActivity::class.java)
             context.startActivity(intent)
         }
     }

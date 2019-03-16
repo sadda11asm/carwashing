@@ -7,6 +7,7 @@ import com.example.carwashing.common.NavigationController
 import com.example.carwashing.ui.MainViewModel
 import com.example.carwashing.ui.MapsActivity
 import com.example.carwashing.ui.carwash.CarWashViewModel
+import com.example.carwashing.ui.login.LoginActivity
 import com.example.carwashing.util.AppExecutors
 import org.koin.android.ext.koin.androidContext
 import org.koin.androidx.viewmodel.experimental.builder.viewModel
@@ -43,6 +44,22 @@ val mainModule = module {
 //    viewModel<SearchViewModel>()
 }
 
+
+val loginModule = module {
+    //scope("main") { get<Gson>().fromJson(get<SharedPreferences>().getString(User.PREF_USER, ""), User::class.java) }
+//    single<ChecksRepository>()
+//    single<DirectoriesRepository>()
+//    single<TalonRepository>()
+//    single<ActRepository>()
+//    single<DocsRepository>()
+//    single<RequisitesRepository>()
+    viewModel<CarWashViewModel>()
+    viewModel<MainViewModel>()
+//    viewModel<ActViewModel>()
+//    viewModel<TalonViewModel>()
+//    viewModel<RequisitesViewModel>()
+//    viewModel<SearchViewModel>()
+}
 
 
 //val getFactory = JsonAndXmlConverters.QualifiedTypeConverterFactory(

@@ -1,5 +1,9 @@
 <resources>
+
     <string name="app_name">Jumaisynba</string>
+    <string name="FACEBOOK_APP_ID">2382662605351017</string>
+    <string name="ACCOUNT_KIT_CLIENT_TOKEN">f9c8cb65facede04641ba3058c623d17</string>
+
     <string name="title_activity_maps">Jumaisynba</string>
     <string name="map_menu">Карта</string>
     <string name="carwashers_menu">Автомойки</string>
